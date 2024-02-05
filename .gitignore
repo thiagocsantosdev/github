@@ -1,0 +1,8 @@
+# Ignore a pasta node_modules
+node_modules
+
+# Ignore arquivos de configuração de SASS
+.sass-cache
+
+# Ignore o arquivo pacakge-lock.Json
+package-lock.json

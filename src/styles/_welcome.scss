@@ -1,0 +1,85 @@
+main{
+
+    display: flex;
+    width: 85vw;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    gap: 4rem;
+    
+    
+
+
+    section.left{
+
+        color: white;
+        width: 50%;
+        font-size: 3rem;
+        
+        h1{
+
+            span{
+                background-color: gold;
+                color: #1f1f1f;
+            }
+        }
+    }
+
+    section.right{
+       width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+       
+       div.container-coins{
+        width: 400px;
+        height: 600px;
+        background-color: #3f3f3f;
+        border-radius: 10px;
+        padding: 40px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        div.bitcoin{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $text-color-neutral;
+            gap: 5px;
+            
+            div.display-info{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+
+                i{
+                    color: orange;
+                    font-size: 1.4rem;
+                }
+
+                p{
+                    color: $text-color-light;
+                }
+
+                span{
+                    font-weight: bold;
+                    color: $text-color-neutral;
+                }
+            }
+            div.display-coin{
+
+
+                p{
+                    font-size: 3.2rem;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                
+                }
+            }
+       }
+    }
+
+}
+}

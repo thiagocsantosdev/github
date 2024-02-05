@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0x;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
+}
+
+$text-color-neutral:white;
+$text-color-light:rgb(163, 162, 162);
+$text-color-emphasis:gold;
+$background-dark:#1f1f1f;
+$background-emphasis:gold;
+
+
+
+body{
+  background-color: $background-dark;
+  font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    
+    @import 'header';
+    @import 'welcome';
+}
+
+
+
+

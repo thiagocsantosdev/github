@@ -1,0 +1,60 @@
+header{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    h1.logo{
+        color:gold;
+        font-weight: 600;
+        font-size: 1.4rem;
+        
+    }
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    li{
+        text-decoration: none;
+        font-weight: 600;
+        padding: 6px;
+        font-size: .9rem;
+        opacity: .8;
+    
+        a{
+            color: white;
+            text-decoration: none;
+            
+        }
+
+
+}
+
+li:first-child{
+    a:hover{
+        color: gold;
+        
+    }
+}
+
+    li:hover{
+        opacity: 1;
+    }
+    li:last-child{
+        background-color: gold;
+        border-radius: 5px;
+        
+       
+        a{
+            color: #1f1f1f;
+        }
+     
+    }
+    li:last-child:hover{
+        opacity: 1;
+        
+    }
+}
