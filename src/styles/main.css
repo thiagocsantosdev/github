@@ -67,11 +67,37 @@ body main {
 body main section.left {
   color: white;
   width: 50%;
-  font-size: 3rem;
+}
+body main section.left h1 {
+  font-size: 4rem;
 }
 body main section.left h1 span {
   background-color: gold;
   color: #1f1f1f;
+}
+body main section.left p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+body main section.left .buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 60px;
+}
+body main section.left .buttons button {
+  padding: 16px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f1f1f;
+  color: white;
+  border: 1px solid white;
+  font-weight: 600;
+}
+body main section.left .buttons button:nth-child(2) {
+  background-color: gold;
+  color: #1f1f1f;
+  border: none;
 }
 body main section.right {
   width: 50%;

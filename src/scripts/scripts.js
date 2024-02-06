@@ -7,6 +7,12 @@ const etcChange24 = document.getElementById('etcChange24')
 const xrpChange24 = document.getElementById('xrpChange24')
 
 
+/// NEws
+
+
+const newsNoticesCoins = document.getElementById('news')
+
+
 const apiDolar = 'https://economia.awesomeapi.com.br/json/last/usd'
 const apiBtc = ' https://api.coinlore.net/api/tickers/'
 
@@ -99,6 +105,40 @@ fetch(apiBtc)
   .catch(err => {
     console.error('Erro:', err)
   });
+
+
+
+  /// NEWS
+
+
+  const newsCoin = 'https://min-api.cryptocompare.com/data/v2/news/?lang=PT&api_key={b150b724c060836641fa9db9c2d9f68583568869b53299350380056bf6fc51e2}'
+
+  fetch(newsCoin)
+  .then(resposta => {
+    if (!resposta.ok) {
+      throw new Error(`Erro na requisição: ${resposta.status}`)
+    }
+    return resposta.json()
+  })
+  .then(data => {
+   
+  const news1 = data.Data[0].title
+  const news2 = data.Data[1].title
+
+  newsNoticesCoins.textContent = (`Noticias ${news2}`)
+
+  console.log(newsCoin)
+
+
+
+  })
+  .catch(err => {
+    console.error('Erro:', err)
+  });
+
+
+
+
 
 
 
