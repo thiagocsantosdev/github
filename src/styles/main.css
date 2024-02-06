@@ -89,30 +89,34 @@ body main section.right div.container-coins {
   flex-direction: column;
   gap: 4rem;
 }
-body main section.right div.container-coins div.bitcoin {
+body main section.right div.container-coins div.bitcoin, body main section.right div.container-coins div.ethereum, body main section.right div.container-coins div.xrp {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   gap: 5px;
 }
-body main section.right div.container-coins div.bitcoin div.display-info {
+body main section.right div.container-coins div.bitcoin p#xrpChange24, body main section.right div.container-coins div.bitcoin p#btcChange24, body main section.right div.container-coins div.bitcoin p#etcChange24, body main section.right div.container-coins div.ethereum p#xrpChange24, body main section.right div.container-coins div.ethereum p#btcChange24, body main section.right div.container-coins div.ethereum p#etcChange24, body main section.right div.container-coins div.xrp p#xrpChange24, body main section.right div.container-coins div.xrp p#btcChange24, body main section.right div.container-coins div.xrp p#etcChange24 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+body main section.right div.container-coins div.bitcoin div.display-info, body main section.right div.container-coins div.ethereum div.display-info, body main section.right div.container-coins div.xrp div.display-info {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
-body main section.right div.container-coins div.bitcoin div.display-info i {
+body main section.right div.container-coins div.bitcoin div.display-info i, body main section.right div.container-coins div.ethereum div.display-info i, body main section.right div.container-coins div.xrp div.display-info i {
   color: orange;
   font-size: 1.4rem;
 }
-body main section.right div.container-coins div.bitcoin div.display-info p {
+body main section.right div.container-coins div.bitcoin div.display-info p, body main section.right div.container-coins div.ethereum div.display-info p, body main section.right div.container-coins div.xrp div.display-info p {
   color: rgb(163, 162, 162);
 }
-body main section.right div.container-coins div.bitcoin div.display-info span {
+body main section.right div.container-coins div.bitcoin div.display-info span, body main section.right div.container-coins div.ethereum div.display-info span, body main section.right div.container-coins div.xrp div.display-info span {
   font-weight: bold;
   color: white;
 }
-body main section.right div.container-coins div.bitcoin div.display-coin p {
+body main section.right div.container-coins div.bitcoin div.display-coin p, body main section.right div.container-coins div.ethereum div.display-coin p, body main section.right div.container-coins div.xrp div.display-coin p {
   font-size: 3.2rem;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "impact";
 }/*# sourceMappingURL=main.css.map */

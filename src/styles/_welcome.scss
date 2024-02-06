@@ -43,12 +43,17 @@ main{
         flex-direction: column;
         gap: 4rem;
 
-        div.bitcoin{
+        div.bitcoin, div.ethereum, div.xrp{
             display: flex;
             flex-direction: column;
             align-items: center;
             color: $text-color-neutral;
             gap: 5px;
+
+            p#xrpChange24, p#btcChange24, p#etcChange24{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size:1rem;
+            }
             
             div.display-info{
                 display: flex;
@@ -74,10 +79,14 @@ main{
 
                 p{
                     font-size: 3.2rem;
-                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    font-family: 'impact';
+                    
                 
                 }
+
+                
             }
+            
        }
     }
 

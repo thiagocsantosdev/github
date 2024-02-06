@@ -3,6 +3,8 @@ const btcValue = document.getElementById('bitcoin-value')
 const etcValue = document.getElementById('etherium-value')
 const xrpValue = document.getElementById('xrp-value')
 const btcChange24 = document.getElementById('btcChange24')
+const etcChange24 = document.getElementById('etcChange24')
+const xrpChange24 = document.getElementById('xrpChange24')
 
 
 const apiDolar = 'https://economia.awesomeapi.com.br/json/last/usd'
@@ -39,6 +41,9 @@ fetch(apiBtc)
 
    
     const btcChange24hdata = data.data[0].percent_change_24h
+    const etcChange24hdata = data.data[2].percent_change_24h
+    const xrpChange24hdata = data.data[6].percent_change_24h
+
     const priceEtcUsd = data.data[1].price_usd
     const priceXrpUsd = data.data[6].price_usd
     
@@ -53,16 +58,40 @@ fetch(apiBtc)
     xrpValue.textContent = `R$ ${xrpBRL.toFixed(2)}`
 
 
-    
-   if (btcChange24hdata < 0){
-      btcChange24.style.color ='red'
+    //Coloração da informação de mudança de valor nas ultimas 24H
+   
+   //BTC
+    if (btcChange24hdata < 0){
+      btcChange24.style.color ='#ee7777'
    }else{
-    btcChange24.style.color='green'
+    btcChange24.style.color='#94ff94'
    }
 
    btcChange24.textContent = `Ùltimas 24hrs:  ${btcChange24hdata}%`
 
     
+   //ETC
+
+   if(etcChange24hdata < 0){
+     etcChange24.style.color='#ee7777'
+   }else{
+    etcChange24.style.color='#94ff94'
+   }
+
+   etcChange24.textContent = `Ùltimas 24hrs:  ${etcChange24hdata}%`
+
+
+   
+  //xrp
+
+  if(xrpChange24hdata< 0){
+    xrpChange24.style.color='#ee7777'
+  }else{
+    xrpChange24.style.color="#94ff94"
+  }
+
+
+  xrpChange24.textContent= `Ùltimas 24hrs:  ${xrpChange24hdata}%`
 
 
 
@@ -70,5 +99,7 @@ fetch(apiBtc)
   .catch(err => {
     console.error('Erro:', err)
   });
+
+
 
   
