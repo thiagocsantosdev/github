@@ -1,9 +1,15 @@
 
-const btcValue = document.getElementsByClassName('bitcoin-value')
-const etcValue = document.getElementsByClassName('etherium-value')
+const btcValue = document.getElementsByClassName('btc-value')
+const ethValue = document.getElementsByClassName('eth-value')
 const xrpValue = document.getElementsByClassName('xrp-value')
+const solValue = document.getElementsByClassName('sol-value')
+const adaValue = document.getElementsByClassName('ada-value')
+const dogValue = document.getElementsByClassName('dog-value')
+
+
+
 const btcChange24 = document.getElementById('btcChange24')
-const etcChange24 = document.getElementById('etcChange24')
+const ethChange24 = document.getElementById('ethChange24')
 const xrpChange24 = document.getElementById('xrpChange24')
 
 // Market
@@ -47,25 +53,36 @@ fetch(apiBtc)
     return resposta.json()
   })
   .then(data => {
-   
+
+
+   //Price of criptos
     const priceBtcUsd = data.data[0].price_usd
+    const priceEthUsd = data.data[1].price_usd
+    const priceXrpUsd = data.data[7].price_usd
+    const priceSolUsd= data.data[4].price_usd
+    const priceAdaUsd= data.data[8].price_usd
+    const priceDogUsd= data.data[10].price_usd
 
-   
+   //Price change 24h
     const btcChange24hdata = data.data[0].percent_change_24h
-    const etcChange24hdata = data.data[2].percent_change_24h
-    const xrpChange24hdata = data.data[6].percent_change_24h
+    const ethChange24hdata = data.data[2].percent_change_24h
+    const xrpChange24hdata = data.data[8].percent_change_24h
 
-    const priceEtcUsd = data.data[1].price_usd
-    const priceXrpUsd = data.data[6].price_usd
     
-
+    
+    //Transform VALUE USD TO BRL
     const btcBRL = priceBtcUsd * dolarAtual
-    const etcBRL = priceEtcUsd * dolarAtual
+    const ethBRL = priceEthUsd * dolarAtual
     const xrpBRL = priceXrpUsd * dolarAtual
+    const solBRL = priceSolUsd * dolarAtual
+    const adaBRL = priceAdaUsd * dolarAtual
+    const dogBRL = priceDogUsd * dolarAtual
     
+
+
 
     btcValue.textContent = `R$${btcBRL.toFixed(2)}`
-    etcValue.textContent = `R$ ${etcBRL.toFixed(2)}`
+    ethValue.textContent = `R$ ${ethBRL.toFixed(2)}`
     xrpValue.textContent = `R$ ${xrpBRL.toFixed(2)}`
 
 
@@ -81,15 +98,15 @@ fetch(apiBtc)
    btcChange24.textContent = `Ùltimas 24hrs:  ${btcChange24hdata}%`
 
     
-   //ETC
+   //ETH
 
-   if(etcChange24hdata < 0){
-     etcChange24.style.color='#ee7777'
+   if(ethChange24hdata < 0){
+     ethChange24.style.color='#ee7777'
    }else{
-    etcChange24.style.color='#94ff94'
+    ethChange24.style.color='#94ff94'
    }
 
-   etcChange24.textContent = `Ùltimas 24hrs:  ${etcChange24hdata}%`
+   ethChange24.textContent = `Ùltimas 24hrs:  ${ethChange24hdata}%`
 
 
    
@@ -112,14 +129,25 @@ fetch(apiBtc)
     btcElement.textContent = `R$: ${btcBRL.toFixed(2)}`;
   }
 
-  for (const etcElement of etcValue) {
-    etcElement.textContent = `R$: ${etcBRL.toFixed(2)}`;
+  for (const ethElement of ethValue) {
+    ethElement.textContent = `R$: ${ethBRL.toFixed(2)}`;
   }
 
   for (const xrpElement of xrpValue) {
     xrpElement.textContent = `R$: ${xrpBRL.toFixed(2)}`;
   }
 
+  for (const solElement of solValue) {
+  solElement.textContent = `R$: ${solBRL.toFixed(2)}`;
+  }
+
+  for (const adaElement of adaValue){
+    adaElement.textContent = `R$: ${adaBRL.toFixed(2)}`;
+  }
+
+  for (const dogElement of dogValue){
+    dogElement.textContent = `R$: ${dogBRL.toFixed(2)}`;
+  }
 
 
 
