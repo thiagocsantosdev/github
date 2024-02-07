@@ -1,0 +1,83 @@
+
+
+section.faq{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+
+    h1{
+        color:white;
+        font-size: 2rem;
+        padding-bottom: 20px;
+    }
+
+    span{
+        border-bottom: 6px solid gold;
+    }
+
+    div.container-market-coins{
+        padding-top: 20px;
+        background-color: #222;
+        width: 50vw;
+        color: white;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        height: 50vh;
+
+       
+        
+
+        div.market-coin-item, div.title-market-coin-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            
+
+
+        }
+
+        div.market-coin-item:hover{
+            box-shadow: black 2px 2px 2px 2px;
+            background-color: #111;
+            cursor: pointer;
+     
+        }
+
+        div.coin-logo-name, div.title-coin-logo-name{
+            display: flex;
+            align-items: center;
+            gap:.5rem;
+            color: gray;
+
+            span{
+                color: white;
+                font-weight: 600;
+            }
+        }
+
+        div.title-market-coin-item{
+            padding: 20px;
+            color: gray;
+
+    
+        }
+
+       
+    
+    
+
+
+    }
+
+ 
+
+    
+    
+}

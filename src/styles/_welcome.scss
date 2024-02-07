@@ -2,125 +2,129 @@
 
 main{
 
-    display: flex;
-    width: 85vw;
-    height: 80vh;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+
     padding: 20px;
     gap: 4rem;
+    flex-direction: column;
     
     
+    
+    div.welcome{
 
-
-
-    section.left{
-
-        color: white;
-        width: 50%;
-       
-        
-        h1{
-            font-size: 4rem;
-            span{
-                background-color: gold;
-                color: #1f1f1f;
-            }
-
-        }
-
-        p{
-            font-size: 1.2rem;
-            margin-top: 20px;
-        }
-        .buttons{
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            margin-top: 60px;
-
-            button{
-           
-                padding:16px 30px;
-                border: none;
-                border-radius: 5px;
-                background-color: #1f1f1f;
-                color: white;
-                border: 1px solid $text-color-neutral;
-                font-weight: 600;                
-            }
-            button:nth-child(2){
-                background-color: gold;
-                color: #1f1f1f;
-                border: none;
-            }
-        }
-
-    }
-
-    section.right{
-       width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-       
-       div.container-coins{
-        width: 400px;
-        height: 600px;
-        background-color: #3f3f3f;
-        border-radius: 10px;
-        padding: 40px 20px 20px 20px;
         display: flex;
-        flex-direction: column;
-        gap: 4rem;
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
 
-        div.bitcoin, div.ethereum, div.xrp{
+        section.left{
+
+            color: white;
+            width: 50%;
+           
+            
+            h1{
+                font-size: 4rem;
+                span{
+                    background-color: gold;
+                    color: #1f1f1f;
+                }
+    
+            }
+    
+            p{
+                font-size: 1.2rem;
+                margin-top: 20px;
+            }
+            .buttons{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                margin-top: 60px;
+    
+                button{
+               
+                    padding:16px 30px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #1f1f1f;
+                    color: white;
+                    border: 1px solid $text-color-neutral;
+                    font-weight: 600;                
+                }
+                button:nth-child(2){
+                    background-color: gold;
+                    color: #1f1f1f;
+                    border: none;
+                }
+            }
+    
+        }
+    
+        section.right{
+           width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+           
+           div.container-coins{
+            width: 400px;
+            height: 600px;
+            background-color: #3f3f3f;
+            border-radius: 10px;
+            padding: 40px 20px 20px 20px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            color: $text-color-neutral;
-            gap: 5px;
-
-            p#xrpChange24, p#btcChange24, p#etcChange24{
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size:1rem;
-            }
-            
-            div.display-info{
+            gap: 4rem;
+    
+            div.bitcoin, div.ethereum, div.xrp{
                 display: flex;
-                gap: 1rem;
+                flex-direction: column;
                 align-items: center;
-
-                i{
-                    color: orange;
-                    font-size: 1.4rem;
+                color: $text-color-neutral;
+                gap: 5px;
+    
+                p#xrpChange24, p#btcChange24, p#etcChange24{
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size:1rem;
                 }
-
-                p{
-                    color: $text-color-light;
+                
+                div.display-info{
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+    
+                    i{
+                        color: orange;
+                        font-size: 1.4rem;
+                    }
+    
+                    p{
+                        color: $text-color-light;
+                    }
+    
+                    span{
+                        font-weight: bold;
+                        color: $text-color-neutral;
+                    }
                 }
-
-                span{
-                    font-weight: bold;
-                    color: $text-color-neutral;
-                }
-            }
-            div.display-coin{
-
-
-                p{
-                    font-size: 3.2rem;
-                    font-family: 'impact';
+                div.display-coin{
+    
+    
+                    p{
+                        font-size: 3.2rem;
+                        font-family: 'impact';
+                        
                     
-                
+                    }
+    
+                    
                 }
-
                 
-            }
-            
-       }
+           }
+        }
+    
+    }
     }
 
-}
+   
 }

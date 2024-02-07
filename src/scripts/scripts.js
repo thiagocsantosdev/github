@@ -1,16 +1,21 @@
 
-const btcValue = document.getElementById('bitcoin-value')
-const etcValue = document.getElementById('etherium-value')
-const xrpValue = document.getElementById('xrp-value')
+const btcValue = document.getElementsByClassName('bitcoin-value')
+const etcValue = document.getElementsByClassName('etherium-value')
+const xrpValue = document.getElementsByClassName('xrp-value')
 const btcChange24 = document.getElementById('btcChange24')
 const etcChange24 = document.getElementById('etcChange24')
 const xrpChange24 = document.getElementById('xrpChange24')
+
+// Market
+
+
+
 
 
 /// NEws
 
 
-const newsNoticesCoins = document.getElementById('news')
+
 
 
 const apiDolar = 'https://economia.awesomeapi.com.br/json/last/usd'
@@ -101,6 +106,25 @@ fetch(apiBtc)
 
 
 
+  // Market
+
+  for (const btcElement of btcValue) {
+    btcElement.textContent = `R$: ${btcBRL.toFixed(2)}`;
+  }
+
+  for (const etcElement of etcValue) {
+    etcElement.textContent = `R$: ${etcBRL.toFixed(2)}`;
+  }
+
+  for (const xrpElement of xrpValue) {
+    xrpElement.textContent = `R$: ${xrpBRL.toFixed(2)}`;
+  }
+
+
+
+
+
+
   })
   .catch(err => {
     console.error('Erro:', err)
@@ -111,32 +135,7 @@ fetch(apiBtc)
   /// NEWS
 
 
-  const newsCoin = 'https://min-api.cryptocompare.com/data/v2/news/?lang=PT&api_key={b150b724c060836641fa9db9c2d9f68583568869b53299350380056bf6fc51e2}'
-
-  fetch(newsCoin)
-  .then(resposta => {
-    if (!resposta.ok) {
-      throw new Error(`Erro na requisição: ${resposta.status}`)
-    }
-    return resposta.json()
-  })
-  .then(data => {
-   
-  const news1 = data.Data[0].title
-  const news2 = data.Data[1].title
-
-  newsNoticesCoins.textContent = (`Noticias ${news2}`)
-
-  console.log(newsCoin)
-
-
-
-  })
-  .catch(err => {
-    console.error('Erro:', err)
-  });
-
-
+  
 
 
 
