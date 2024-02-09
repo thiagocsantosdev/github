@@ -150,48 +150,61 @@ body main div.welcome section.right div.container-coins div.bitcoin div.display-
 body section.faq {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 body section.faq h1 {
   color: white;
   font-size: 2rem;
   padding-bottom: 20px;
 }
-body section.faq span {
+body section.faq p.gold-bot {
   border-bottom: 6px solid gold;
 }
 body section.faq div.container-market-coins {
-  padding-top: 20px;
   background-color: #222;
-  width: 50vw;
+  width: 100%;
+  max-width: 800px;
   color: white;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  height: 50vh;
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100% - 100px);
+  box-sizing: border-box;
 }
-body section.faq div.container-market-coins div.market-coin-item, body section.faq div.container-market-coins div.title-market-coin-item {
-  display: flex;
+body section.faq div.container-market-coins div.market-coin-item,
+body section.faq div.container-market-coins div.title-market-coin-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
   padding: 10px;
-}
-body section.faq div.container-market-coins div.market-coin-item:hover {
-  box-shadow: black 2px 2px 2px 2px;
-  background-color: #111;
   cursor: pointer;
 }
-body section.faq div.container-market-coins div.coin-logo-name, body section.faq div.container-market-coins div.title-coin-logo-name {
+body section.faq div.container-market-coins div.market-coin-item:hover,
+body section.faq div.container-market-coins div.title-market-coin-item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #111;
+}
+body section.faq div.container-market-coins div.market-coin-item p,
+body section.faq div.container-market-coins div.title-market-coin-item p {
+  margin: 0;
+}
+body section.faq div.container-market-coins div.coin-logo-name,
+body section.faq div.container-market-coins div.title-coin-logo-name {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: gray;
 }
-body section.faq div.container-market-coins div.coin-logo-name span, body section.faq div.container-market-coins div.title-coin-logo-name span {
+body section.faq div.container-market-coins div.coin-logo-name span,
+body section.faq div.container-market-coins div.title-coin-logo-name span {
   color: white;
   font-weight: 600;
 }
